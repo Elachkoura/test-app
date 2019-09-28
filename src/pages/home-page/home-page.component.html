@@ -1,0 +1,33 @@
+<!-- ToolBar Content -->
+<mat-toolbar color="primary">
+  <!--  ToolBar title -->
+  Profile Github
+</mat-toolbar>
+
+<div class="container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Username GitHub" #username>
+    </mat-form-field>
+    <button mat-mini-fab color="primary" aria-label="Search Username" (click)="searchUser($event, username.value)">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+
+  <button class="btn-short-url" mat-raised-button color="primary" (click)="goToShortUrl()">Go to short URL page</button>
+
+  <mat-card class="example-card" *ngIf="user">
+    <mat-card-header>
+      <div class="mat-card-header-text">
+        <mat-card-title *ngIf="user.name">{{ user.name | titlecase }}</mat-card-title>
+        <mat-card-subtitle *ngIf="user.bio">Bio: {{ user.bio }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="user.email">Email: {{ user.email }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="user.company">Company: {{ user.company }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="user.location">Location: {{ user.location }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <img mat-card-image src="{{ user.avatar_url }}" alt="Avatar">
+    </mat-card-content>
+  </mat-card>
+</div>

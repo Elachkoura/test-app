@@ -1,0 +1,41 @@
+.container {
+  max-width: 768px;
+  margin: auto;
+}
+
+form {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+
+  mat-form-field {
+    flex: 1;
+    margin-right: 10px;
+  }
+}
+
+mat-card {
+  display: flex;
+  margin: 20px auto;
+}
+
+mat-card-title {
+  font-size: 30px!important;
+}
+
+mat-card-header {
+  flex: 90%;
+}
+
+.mat-card-header-text {
+  padding-left: 10px;
+}
+
+mat-card-content {
+  flex: 10%;
+}
+
+.mat-card-image {
+  width: 100%;
+  margin: 0!important;
+}

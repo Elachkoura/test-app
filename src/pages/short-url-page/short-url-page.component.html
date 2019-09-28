@@ -1,0 +1,20 @@
+<!-- ToolBar Content -->
+<mat-toolbar color="primary">
+  <!--  ToolBar title -->
+  Short URL
+</mat-toolbar>
+
+<div class="container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Paste your URL" #longUrl>
+    </mat-form-field>
+    <button mat-mini-fab color="primary" aria-label="Short Now" (click)="shortUrl($event, longUrl.value)">
+      <mat-icon>check</mat-icon>
+    </button>
+  </form>
+
+  <div class="">
+
+  </div>
+</div>
